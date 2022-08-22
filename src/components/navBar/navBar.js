@@ -1,11 +1,12 @@
-import logo from `../navBar/logo.jpg`
-import style from `../navBar.css`
+import logo from "./Logo.jpg"
+import style from "./NavBar.css"
 
-const navBar = () => {
+const NavBar = () => {
     return (
-        <><><div className="navbar-container" /><div>
+
+        <div className="navbar-container">
             <img width={`100px`} src={logo} alt="logo" />
-        </div>
+            
             <ul>
                 <li>
                     <a href="#">Home</a>
@@ -19,10 +20,12 @@ const navBar = () => {
                 <li>
                     <a href="#">Contacto</a>
                 </li>
-            </ul></><div>
+            </ul>
+            <div>
                 <button>Login</button>
-            </div></>
+            </div>
         </div>
-    );
+    )
+}
 
-};
+export default NavBar

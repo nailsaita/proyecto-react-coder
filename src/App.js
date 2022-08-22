@@ -1,11 +1,15 @@
-import logo from './logo.svg';
-import './App.css';
-import navBar from `../src/components/navBar.js`;
+import NavBar from "./components/NavBar/NavBar.js"
+
+import "./App.css";
+import logo from "./components/NavBar/Logo.jpg";
 
 function App() {
+
   return (
-    <><div className="App">
-   <navBar> </navBar>
+    
+    <div className="App">
+    <NavBar/>
+
     <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
@@ -19,7 +23,7 @@ function App() {
         >
           Learn React
         </a>
-      </header></>
+      </header>
     </div>
   );
 }
