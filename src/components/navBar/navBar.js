@@ -1,5 +1,5 @@
 import style from "./NavBar.css"
-import CartWidget from "./CartWidget/CartWidget.js"
+import CartWidget from "../CartWidget/CartWidget.js"
 
 const NavBar = () => {
     return (

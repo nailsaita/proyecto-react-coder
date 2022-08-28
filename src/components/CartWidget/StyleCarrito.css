@@ -1,4 +1,8 @@
 img {
- font-size: 30px;
-}
+    height: 40px;
+    width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 

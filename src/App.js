@@ -13,6 +13,7 @@ function App() {
 
     <header className="App-header">
       <ItemListContainer titulo="Cerámica de Lu" subtitulo="Piezas únicas en cerámica"/>
+       
         <img src={logo} className="App-logo" alt="logo" />
         <p>
           Edit <code>src/App.js</code> and save to reload.
@@ -28,6 +29,6 @@ function App() {
       </header>
     </div>
   );
-}
+};
 
 export default App;
