@@ -2,6 +2,8 @@ import NavBar from "./components/NavBar/NavBar.js"
 import "./App.css";
 import logo from "./components/NavBar/Logo.jpg";
 import ItemListContainer from "./components/ItemListContainer/ItemListContainer.js"
+import SuperForm from "./components/SuperForm/SuperForm.js"
+import ItemCount from "./components/ItemCount/ItemCount.js";
 
 
 function App() {
@@ -13,9 +15,10 @@ function App() {
 
     <header className="App-header">
       <ItemListContainer titulo="Cerámica de Lu" subtitulo="Piezas únicas en cerámica"/>
-       
+      <ItemCount/>
+
         <img src={logo} className="App-logo" alt="logo" />
-        <p>
+          <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
         <a

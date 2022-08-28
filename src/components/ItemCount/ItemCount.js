@@ -1,11 +1,16 @@
+import { useState } from "react";
 const ItemCount = () => {
-
-    const doSomething = () => {
-        console.log("Hola Coders");
-    };
+    const [contador, setContador] = useState (0)
+    const suma = () =>{
+        setContador(contador + 1)
+    }
     return (
-            <div>
-
-    </div>
+        <>
+          <div>Carrito</div>
+          <h2>{contador}</h2>
+          <button onClick={suma}>Agregá uno</button>
+        </>
     );
 };
+
+export default ItemCount
