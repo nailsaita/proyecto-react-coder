@@ -15,7 +15,7 @@ function App() {
 
     <header className="App-header">
       <ItemListContainer titulo="Cerámica de Lu" subtitulo="Piezas únicas en cerámica"/>
-      <ItemCount/>
+      <ItemCount nombreProducto= "Sumá a tu carrito"/>
 
         <img src={logo} className="App-logo" alt="logo" />
           <p>
