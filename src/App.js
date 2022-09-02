@@ -8,6 +8,8 @@ import ItemCount from "./components/ItemCount/ItemCount.js";
 
 function App() {
 
+function onAdd (counter){console.log(counter)}
+  
   return (
     
     <div className="App">
@@ -15,7 +17,7 @@ function App() {
 
     <header className="App-header">
       <ItemListContainer titulo="Cerámica de Lu" subtitulo="Piezas únicas en cerámica"/>
-      <ItemCount nombreProducto= "Sumá a tu carrito"/>
+      <ItemCount nombreProducto= "Sumá a tu carrito" stock = {10} initial = {1} onAdd={onAdd} />
 
         <img src={logo} className="App-logo" alt="logo" />
           <p>
@@ -32,6 +34,7 @@ function App() {
       </header>
     </div>
   );
+
 };
 
 export default App;

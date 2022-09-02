@@ -1,22 +1,18 @@
 import './ItemCountStyle.css';
 import { useState } from "react";
 
-const ItemCount = ({nombreProducto}) => {
+const ItemCount = ({nombreProducto, stock, initial, onAdd}) => {
     
-    const [ItemCount, setItemCount] = useState(1);
+    const [counter, setCounter] = useState(initial);
         const sumar = () => {
-            if (ItemCount < 10){
-                setItemCount(ItemCount + 1);
-            } else {
-                setItemCount(1)
-            }
+            if (counter < stock){
+                setCounter(counter + 1);
+            } 
         }
         const restar = () => {
-            if (ItemCount > 1){
-                setItemCount(ItemCount - 1);
-            } else {
-                setItemCount(10)
-            }
+            if (counter > initial){
+                setCounter(counter - 1);
+            } 
         }
 
     return (
@@ -24,10 +20,10 @@ const ItemCount = ({nombreProducto}) => {
             <h4>{nombreProducto}:</h4>
             <div className="counter">
                 <div className="itemCountButton" onClick={restar}><h4>-</h4></div>
-                <div className="itemCount">{ItemCount}</div>
+                <div className="itemCount">{counter}</div>
                 <div className="itemCountButton" onClick={sumar}><h4>+</h4></div>
             </div>
-            <button>Confirmar</button>
+            <button onClick = {()=> {onAdd (counter)}}>Confirmar</button>
         </div>
     );
 }
