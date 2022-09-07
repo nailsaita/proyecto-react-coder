@@ -1,11 +1,30 @@
+import data from "MockData.js";
+import { useState, useEffect } from "react";
+import ItemList from "../ItemList/ItemList.js"
 
-const ItemListContainer = ({titulo, subtitulo}) => {
-    
+const ItemListContainer = ({greeting}) => {
+    const [ items, setItems ] = useState ([]);
+
+    const getData = New Promise((resolve, reject) =>(){
+        setTimeout(() => {
+            resolve(data);
+        }, 2000);
+    });
+
+
+    useEffect{() => {
+      getData.then((result) => {
+        setItems(result);
+        console.log(result)
+      })
+    }, []};
+
+
     return (
-        <div>
-            <h1>{titulo}</h1>
-            <h2>{subtitulo}</h2>            
-        </div>
+    <>
+    <ItemList itemsList={items} />
+    </>
     );
 };
-export default ItemListContainer;
+
+export default ItemListContainer
